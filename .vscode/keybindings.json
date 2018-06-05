@@ -1,0 +1,40 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    //调用编译C/C++任务
+    {"key": "f5","command": "workbench.action.tasks.runTask","args": "C/C++" },
+    { "key": "f5","command": "workbench.action.tasks.runTask","args":"Python", "when":"resourceExtname == .py"},
+    { "key": "f5","command": "workbench.action.tasks.runTask","args":"Java", "when":"resourceExtname == .java"},
+    
+    { "key": "f7","command": "workbench.action.tasks.runTask"},
+
+    // {"key": "f5","command": "workbench.action.tasks.runTask","args": "编译运行C/C++(内部窗口)","when": "inZenMode"},
+
+    
+    
+    //热键冲突
+    { "key": "shift+alt+up","command": "editor.action.insertCursorAbove","when": "editorTextFocus" },
+    { "key": "shift+alt+down","command": "editor.action.insertCursorBelow","when": "editorTextFocus" },
+    
+    //markdown预览
+    { "key": "alt+m","command": "markdown.showPreview","when": "!terminalFocus" },
+    
+    //关闭窗口
+    { "key": "alt+e","command": "workbench.action.closeActiveEditor" },
+    
+    //全屏
+    { "key": "f11","command": "workbench.action.toggleZenMode" },
+    { "key": "f11","command": "workbench.action.exitZenMode","when": "inZenMode"},
+ 
+
+    //文件范围移动
+    {"key": "alt+h","command": "cursorTop","when": "editorTextFocus" },
+    {"key": "alt+l","command": "cursorBottom","when": "editorTextFocus" },
+    {"key": "ctrl+alt+h","command": "cursorTopSelect","when": "editorTextFocus" },
+    {"key": "ctrl+alt+l","command": "cursorBottomSelect","when": "editorTextFocus" },
+    
+    //单词范围移动
+    { "key": "alt+j","command": "cursorWordStartLeft","when": "editorTextFocus" },
+    { "key": "shift+alt+j","command": "cursorWordStartLeftSelect","when": "editorTextFocus" },
+    { "key": "alt+k","command": "cursorWordStartRight","when": "editorTextFocus" },
+    { "key": "shift+alt+k","command": "cursorWordStartRightSelect","when": "editorTextFocus" }
+]

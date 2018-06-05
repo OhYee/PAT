@@ -1,0 +1,49 @@
+{
+    "version": 4,
+    "clang_format": {
+        "style": "file",
+        "fallback-style": "LLVM",
+        "sort-includes": true
+    },
+    "configurations": [{
+            "name": "Win32",
+            "includePath": [
+                "${workspaceRoot}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include/c++/6/tr1",
+                "/usr/include/c++/6",
+                "/usr/include/x86_64-linux-gnu/bits",
+                "/usr/include"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "",
+                "path": [
+                    "/usr/include/c++/6/tr1",
+                    "/usr/include/c++/6",
+                    "/usr/include/x86_64-linux-gnu/bits",
+                    "/usr/include"
+                ]
+            },
+            "intelliSenseMode": "msvc-x64"
+        }
+    ]
+}
