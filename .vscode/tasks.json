@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0",
+    "version": "1.0.0",
     "tasks": [
         {
             "taskName": "C/C++",
@@ -47,7 +47,7 @@
             "echoCommand": false,
             "suppressTaskName": false,
             "args": [
-                "javac \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\Main.class\""
+                "javac \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\*.class\""
             ],
             "problemMatcher": {
                 "owner": "java",
