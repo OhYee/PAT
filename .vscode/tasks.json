@@ -47,7 +47,7 @@
             "echoCommand": false,
             "suppressTaskName": false,
             "args": [
-                "javac \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\*.class\""
+                "javac -encoding utf-8 \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\*.class\""
             ],
             "problemMatcher": {
                 "owner": "java",
