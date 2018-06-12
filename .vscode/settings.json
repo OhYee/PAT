@@ -8,7 +8,6 @@
 
 
     "workbench.statusBar.visible": true,
-    "window.menuBarVisibility": "toggle",
     
     //拖拽
     "editor.dragAndDrop": true,

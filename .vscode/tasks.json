@@ -1,16 +1,14 @@
 {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "C/C++",
-            "command": "",
-            "isShellCommand": false,
-            "showOutput": "always",
-            "echoCommand": false,
-            "suppressTaskName": false,
-            "args": [
-                "g++ -g -Wall \"${file}\" -o \"${file}.exe\" -std=c++14 -O2 && \"${file}.exe\" <in.txt && del /Q \"${file}.exe\""
-            ],
+            "label": "C/C++",
+            "type": "shell",
+            "command": "g++ -g -Wall \"${file}\" -o \"${file}.exe\" -std=c++14 -O2 && \"${file}.exe\" <in.txt && del /Q \"${file}.exe\"",
+            "presentation": {
+                "reveal": "always",
+                "echo": false,
+            },
             "problemMatcher": {
                 "owner": "cpp",
                 "fileLocation": [
@@ -28,27 +26,23 @@
             }
         },
         {
-            "taskName": "Python",
-            "command": "",
-            "isShellCommand": true,
-            "showOutput": "always",
-            "echoCommand": false,
-            "suppressTaskName": false,
-            "args": [
-                "python \"${file}\"<in.txt",
-            ],
+            "label": "Python",
+            "type": "shell",
+            "command": "python \"${file}\"<in.txt",
+            "presentation": {
+                "reveal": "always",
+                "echo": false
+            },
             "problemMatcher": []
         },
         {
-            "taskName": "Java",
-            "command": "",
-            "isShellCommand": true,
-            "showOutput": "always",
-            "echoCommand": false,
-            "suppressTaskName": false,
-            "args": [
-                "javac -encoding utf-8 \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\*.class\""
-            ],
+            "label": "Java",
+            "type": "shell",
+            "command": "javac -encoding utf-8 \"${file}\" && java -classpath \"${fileDirname}\" Main <in.txt && del /Q \"${fileDirname}\\*.class\"",
+            "presentation": {
+                "reveal": "always",
+                "echo": false
+            },
             "problemMatcher": {
                 "owner": "java",
                 "fileLocation": [
@@ -56,7 +50,7 @@
                     "/"
                 ],
                 "pattern": {
-                    "regexp": "^(.*):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "regexp": "^(.*):(\\d+):\\s+(警告|错误):\\s+(.*)$",
                     "file": 1,
                     "line": 2,
                     "severity": 3,
