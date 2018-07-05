@@ -70,10 +70,10 @@ class maxFlow {
             memset(edges[i], 0, sizeof(Edge) * n);
         }
 
-        dis = new int[n + 5];
-        num = new int[n + 5];
-        pre = new int[n + 5];
-        cur = new int[n + 5];
+        dis = new int[n];
+        num = new int[n + 1];
+        pre = new int[n];
+        cur = new int[n];
     }
     ~maxFlow() {
         for (int i = 0; i < n; ++i)
@@ -92,7 +92,7 @@ class maxFlow {
     void bfs() {
         while (!Q.empty())
             Q.pop();
-        memset(dis, 0, sizeof(int) * (n + 5));
+        memset(dis, 0, sizeof(int) * n);
         Q.push(v);
         dis[v] = 1;
         while (!Q.empty()) {
@@ -109,7 +109,7 @@ class maxFlow {
     }
 
     void layerCalc() {
-        memset(num, 0, sizeof(int) * (n + 5));
+        memset(num, 0, sizeof(int) * (n + 1));
         for (int i = 0; i < n; ++i)
             ++num[dis[i]];
     }
@@ -135,8 +135,8 @@ class maxFlow {
     }
 
     int dfs() {
-        memset(pre, 0, sizeof(int) * (n + 5));
-        memset(cur, 0, sizeof(int) * (n + 5));
+        memset(pre, 0, sizeof(int) * n);
+        memset(cur, 0, sizeof(int) * n);
 
         int flow = 0;
         int t = s;
